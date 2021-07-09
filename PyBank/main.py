@@ -40,7 +40,8 @@ with open(csvpath) as csvfile:
     print (f'Greatest Increase in Profits: {months[change_from_previous.index(maxvalue)]} (${maxvalue:,})')
     print (f'Greatest Decrease in Profits: {months[change_from_previous.index(minvalue)]} (${minvalue:,})')
 #print to txt file
-with open("output.txt", "w") as output:
+save_path = os.path.join('..','PyBank','Analysis', 'output.txt')
+with open(save_path, "w") as output:
     print("Financial Analysis", file=output)
     print("------------------------", file=output)
     print(f'Total Months: {rowcount}', file=output)

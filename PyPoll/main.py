@@ -46,7 +46,8 @@ for key,value in candidates.items():
         winner = key
 
 #writing to txt
-with open("output.txt", "w") as output:
+save_path = os.path.join("..","PyPoll",'Analysis', 'output.txt')
+with open(save_path, "w") as output:
     print("Election Results", file=output)
     print("------------------------", file=output)
     print(f'Total Votes: {totalvotes:,}', file=output)
